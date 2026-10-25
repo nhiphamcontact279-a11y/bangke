@@ -1,0 +1,9 @@
+{
+  "name": "bang-ke-web",
+  "version": "1.0.0",
+  "description": "Bảng kê bán lẻ - lưu trữ sao kê, báo cáo doanh thu, hóa đơn (có mật khẩu)",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=16" },
+  "license": "UNLICENSED"
+}
