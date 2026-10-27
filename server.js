@@ -56,7 +56,7 @@ const server = http.createServer(async (req, res) => {
     if (p === '/api/kho' && req.method === 'GET') return json(res, 200, idx);
     if (p === '/api/kho' && req.method === 'POST') {
       const kind = url.searchParams.get('kind');
-      if (!['sk', 'dt', 'hd', 'bk'].includes(kind)) return json(res, 400, { error: 'Loại file không hợp lệ' });
+      if (!['sk', 'dt', 'hd', 'sq', 'st', 'bk'].includes(kind)) return json(res, 400, { error: 'Loại file không hợp lệ' });
       const buf = await readBody(req, MAX_UPLOAD);
       if (!buf.length) return json(res, 400, { error: 'File rỗng' });
       const id = kind + '_' + Date.now().toString(36) + crypto.randomBytes(3).toString('hex');
